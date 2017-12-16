@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shop Online</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
+    <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="<%= controller.controller_name %>">
+      <div id="banner">
+        <%= image_tag("shop.png") %>
+        <%= @page_title || "Shop Online" %>
+      </div>
+      <div id="columns">
+        <div id="side">
+          <ul>
+            <li><a href="http://www....">Главная страница</a></li>
+            <li><a href="http://www..../faq">Вопросы</a></li>
+            <li><a href="http://www..../news">Новости</a></li>
+            <li><a href="http://www..../contact">Контакты</a></li>
+          </ul>
+          <h3 id="time"> <%= Time.now.strftime("%H:%M:%S") %></h3>
+        </div>
+        <div id="main">
+           <%= yield %>
+        </div>
+      </div>
+  </body>
+</html>
