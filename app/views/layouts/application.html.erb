@@ -3,17 +3,22 @@
   <head>
     <title>Shop Online</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
-    <%= javascript_include_tag 'application.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application.js', 'data-turbolinks-track'=> true %>
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="<%= controller.controller_name %>">
+  <body class='<%= controller.controller_name %>'>
       <div id="banner">
         <%= image_tag("shop.png") %>
         <%= @page_title || "Shop Online" %>
       </div>
       <div id="columns">
         <div id="side">
+        <% if @cart %>
+          <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %> 
+            <%= render @cart %>
+          <% end %>
+        <% end %>
           <ul>
             <li><a href="http://www....">Главная страница</a></li>
             <li><a href="http://www..../faq">Вопросы</a></li>

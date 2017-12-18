@@ -3,7 +3,6 @@
 <h1>Список товаров</h1>
 
 <table>
-  <tbody>
     <% @products.each do |product| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td>
@@ -22,7 +21,6 @@
         </td>
       </tr>
     <% end %>
-  </tbody>
 </table>
 
 <br>
