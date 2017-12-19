@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Sergey Petrov
+  address: MyText
+  email: serjpetrov@mail.ru
+  pay_type: Наложенный платеж
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString
