@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Название:</strong>
+  <strong><%= t('.title') %>:</strong>
   <%= @product.title %>
 </p>
 
 <p>
-  <strong>Описание:</strong>
+  <strong><%= t('.description') %>:</strong>
   <%= @product.description %>
 </p>
 
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Цена:</strong>
-  <%= @product.price %>
+  <strong><%= t('.price') %>:</strong>
+  <%= number_to_currency(@product.price) %>
 </p>
 
-<%= link_to 'Редактировать', edit_product_path(@product) %> |
-<%= link_to 'Назад', products_path %>
+<%= link_to t('.edit'), edit_product_path(@product) %> |
+<%= link_to t('.back'), products_path %>

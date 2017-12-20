@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Список товаров</h1>
+<h1><%= t('.products') %></h1>
 
 <table>
     <% @products.each do |product| %>
@@ -15,9 +15,9 @@
               </dl>
         </td>
         <td class="list_actions">
-            <%= link_to 'Подробнее', product %><br>
-            <%= link_to 'Редактировать', edit_product_path(product) %><br>
-            <%= link_to 'Удалить', product, method: :delete, data: { confirm: 'Вы уверены?' } %>
+            <%= link_to t('.show'), product %><br>
+            <%= link_to t('.edit'), edit_product_path(product) %><br>
+            <%= link_to t('.delete'), product, method: :delete, data: { confirm: t('.confirm') } %>
         </td>
       </tr>
     <% end %>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'Новый товар', new_product_path %>
+<%= link_to t('.new_products'), new_product_path %>

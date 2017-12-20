@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Имя:</strong>
+  <strong><%= t('.name')%>:</strong>
   <%= @order.name %>
 </p>
 
 <p>
-  <strong>Адрес:</strong>
+  <strong><%= t('.address')%>:</strong>
   <%= @order.address %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t('.email')%>:</strong>
   <%= @order.email %>
 </p>
 
 <p>
-  <strong>Способ оплаты:</strong>
+  <strong><%= t('.pay_type')%>:</strong>
   <%= @order.pay_type %>
 </p>
 
-<%= link_to 'Редактировать', edit_order_path(@order) %> |
-<%= link_to 'Назад', orders_path %>
+<%= link_to t('.edit'), edit_order_path(@order) %> |
+<%= link_to t('.back'), orders_path %>

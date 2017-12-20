@@ -1,6 +1,6 @@
-<h1>Editing Line Item</h1>
+<h1><%= t('.title') %></h1>
 
 <%= render 'form', line_item: @line_item %>
 
-<%= link_to 'Показать', @line_item %> |
-<%= link_to 'Назад', line_items_path %>
+<%= link_to t('.show'), @line_item %> |
+<%= link_to t('.back'), line_items_path %>

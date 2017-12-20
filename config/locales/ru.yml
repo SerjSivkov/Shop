@@ -1,0 +1,148 @@
+---
+ru:
+  layouts:
+    application:
+      title:      "Онлайн Магазин"
+      home:       "Главная"
+      questions:  "Вопросы"
+      news:       "Новости"
+      contact:    "Контакты"
+  store:
+    index:
+      title_html: "Каталог товаров"
+      add_html:   "Добавить в корзину"
+  carts:
+    cart:
+      title:      "Ваша корзина"
+      empty:      "Очистить"
+      checkout:   "Оплатить"
+      total:      "Всего"
+      confirm:    "Вы уверены?"
+    form:
+      submit:     "Создать корзину"
+    new:
+      title:      "Новая корзина"
+      back:       "Назад"
+    index:
+      title:      "Корзины продуктов"
+      show:       "Показать"
+      edit:       "Изменить"
+      delete:     "Удалить"
+      new_catr:   "Новая корзина"
+      confirm:    "Вы уверены?"
+  number:
+    currency:
+      format:
+        unit:     "руб."
+        precision:  2
+        separator: ","
+        delimiter: " "
+        strip_insignificant_zeros: false
+        format:    "%n&nbsp;%u"
+  products:
+    new:
+      legend:          "Новый товар"
+      back:            "Назад"
+    form:
+      title:           "Название"
+      description:     "Описание"
+      price:           "Цена"
+      submit:          "Создать товар"
+    edit:
+      title:           "Редактировать товар"
+      show:            "Показать"
+      back:            "Назад"
+    index:
+      products:        "Список товаров"
+      show:            "Подробнее"
+      edit:            "Редактировать"
+      delete:          "Удалить"
+      new_products:    "Новый товар"
+      confirm:         "Вы уверены?"
+    show:
+      title:           "Название"
+      description:     "Описание"
+      price:           "Цена"
+      edit:            "Изменить"
+      back:            "Назад"
+  orders:
+    new:
+      legend:          "Пожалуйста введите Ваши данные"
+    edit:
+      title:           "Редактировать заказ"
+      show:            "Показать"
+      back:            "Назад"
+    index:
+      orders:          "Заказы"
+      name:            "ФИО"
+      address:         "Адрес"
+      email:           "E-mail"
+      pay_type:        "Оплата"
+      show:            "Показать"
+      edit:            "Изменить"
+      delete:          "Удалить"
+      new_order:       "Новый заказ"
+      confirm:         "Вы уверены?"
+    show:
+      name:            "ФИО"
+      address:         "Адрес"
+      email:           "E-mail"
+      pay_type:        "Оплата"
+      edit:            "Изменить"
+      back:            "Назад"
+    form:
+      name:            "ФИО"
+      address_html:    "Адрес"
+      email:           "E-mail"
+      pay_type:        "Оплата"
+      pay_prompt_html: "Выберете способ оплаты"
+      submit:          "Произвести оплату"
+  line_items:
+    form:
+      product_id:      "Идентификатор товара"
+      cart:            "Корзина"
+      submit:          "Создать покупку"
+    edit:
+      title:           "Редактирование Line Item"
+      show:            "Показать"
+      back:            "Назад"
+    index:
+      title:           "Line Items"
+      product:         "Продукт"
+      cart:            "Корзина"
+      show:            "Показать"
+      edit:            "Изменить"
+      delete:          "Удалить"
+      new_line_item:   "Создать line item"
+      confirm:         "Вы уверены?"
+    new:
+      legend:          "Новая line item"
+      back:            "Назад"
+    show:
+      product:         "Товар"
+      cart:            "Корзина"
+      edit:            "Изменить"
+      back:            "Назад"
+  activerecord:
+    errors:
+      messages:
+        inclusion: имеет непредусмотренное значение
+        blank: не может быть пустым
+    models:
+      order:           "заказ"
+    attributes:
+      order:
+        address:       "Адрес"
+        name:          "ФИО"
+        email:         "E-mail"
+        pay_type:      "Способ оплаты"
+      line_item:
+        product:       "Продукт"
+        cart:          "Корзина"
+  errors:
+    template:
+      body:            'Проблемы возникли со следующими полями:'
+      header:
+        one:           "%{model}: сохранение не удалось из-за %{count} ошибки"
+        other:         "%{model}: сохранение не удалось из-за %{count} ошибки"
+  thanks:              "Спасибо за покупку."

@@ -1,0 +1,28 @@
+<h1>Список Пользователей</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Логин</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= link_to 'Показать', user %></td>
+        <td><%= link_to 'Редактировать', edit_user_path(user) %></td>
+        <td><%= link_to 'Удалить', user, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Новый пользователь', new_user_path %>

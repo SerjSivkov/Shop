@@ -7,19 +7,19 @@ Shop::Application.routes.draw do
   end
 
   #get 'sessions/new'
-
-  get 'sessions/create'
-  get 'sessions/destroy'
+  get "sessions/create"
+  get "sessions/destroy"
 
   resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
-  get 'store/index'
-
   resources :products do
-  	get :who_bought, on: :member
+    get :who_bought, on: :member
   end
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root to: 'store#index', as: 'store', via: :all
+  end
+  #get 'store/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'store#index', as: 'store'
 end

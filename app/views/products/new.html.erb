@@ -1,5 +1,5 @@
-<h1>Новый товар</h1>
+<h1><%= t('.legend') %></h1>
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Назад', products_path %>
+<%= link_to t('.back'), products_path %>

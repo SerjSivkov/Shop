@@ -1,8 +1,7 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h5><p><%= @shown_message %></p></h5>
-<h1>Список товаров</h1>
+<h1><%= t('.title_html') %></h1>
 <% cache ['store', Product.latest] do %>
    <% @products.each do |product| %>
    <% cache ['entry', product] do %>
@@ -13,8 +12,8 @@
       <%= sanitize(product.description) %>
 
       <div class="price_line">
-        <span class="price"><%= number_to_currency(product.price, unit: "R", separator: ",", delimiter: "", format: "%n %u") %></span>
-        <%= button_to 'Добавить в корзину', line_items_path(product_id: product), remote: true %>
+        <span class="price"><%= number_to_currency(product.price) %></span>
+        <%= button_to t('.add_html'), line_items_path(product_id: product), remote: true %>
       </div>
     </div>
   <% end %>

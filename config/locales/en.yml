@@ -30,4 +30,147 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title:            "Shop Online"
+      home:             "Home"
+      questions:        "Questions"
+      news:             "News"
+      contact:          "Contact"
+  store:
+    index:
+      title_html:       "Your Shop Catalog"
+      add_html:         "Add to Cart"
+  carts:
+    cart:
+      title:            "Your Cart"
+      empty:            "Empty cart"
+      checkout:         "Checkout"
+      total:            "Total"
+      confirm:          "Are you sure?"
+    form:
+      submit:           "Create cart"
+    new:
+      title:            "New cart"
+      back:             "Back"
+    index:
+      title:            "Carts product"
+      show:             "Show"
+      edit:             "Edit"
+      delete:           "Delete"
+      new_catr:         "New cart"
+      confirm:          "Are you sure?"
+  number:
+    currency:
+      format:
+        unit:           "$"
+        precision:       2
+        separator:      "."
+        delimiter:      ","
+        format :       "%u%n"
+  products:
+    new:
+      legend:          "New product"
+      back:            "Back"
+    form:
+      title:           "Title"
+      description:     "Description"
+      price:           "Price"
+      submit:          "Create Product"
+    edit:
+      title:           "Edit product"
+      show:            "Show"
+      back:            "Back"
+    index:
+      products:        "List Products"
+      show:            "Detail"
+      edit:            "Edit"
+      delete:          "Delete"
+      new_products:    "New products"
+      confirm:         "Are you sure?"
+    show:
+      title:           "Title"
+      description:     "Description"
+      price:           "Price"
+      edit:            "Edit"
+      back:            "Back"
+  orders:
+    new:
+      legend:          "Please Enter Your Details"
+    edit:
+      title:           "Edit order"
+      show:            "Show"
+      back:            "Back"
+    index:
+      orders:          "Orders"
+      name:            "Name"
+      address:         "Address"
+      email:           "E-mail"
+      pay_type:        "Pay with"
+      show:            "Show"
+      edit:            "Edit"
+      delete:          "Delete"
+      new_order:       "New order"
+      confirm:         "Are you sure?"
+    show:
+      name:            "Name"
+      address:         "Address"
+      email:           "E-mail"
+      pay_type:        "Pay with"
+      edit:            "Edit"
+      back:            "Back"
+    form:
+      name:            "Name"
+      address_html:    "Address"
+      email:           "E-mail"
+      pay_type:        "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit:          "Place Order"
+  line_items:
+    form:
+      product_id:      "Product id"
+      сart:            "Cart"
+      submit:          "Create item"
+    edit:
+      title:           "Editing Line Item"
+      show:            "Show"
+      back:            "Back"
+    index:
+      title:           "Line Items"
+      product:         "Product"
+      cart:            "Cart"
+      show:            "Detail"
+      edit:            "Edit"
+      delete:          "Delete"
+      new_line_item:   "New line item"
+      confirm:         "Are you sure?"
+    new:
+      legend:          "New line item"
+      back:            "Back"
+    show:
+      product:         "Product"
+      cart:            "Cart"
+      edit:            "Edit"
+      back:            "Back"
+  activerecord:
+    errors:
+      messages:
+        inclusion:     "it is not included in the list"
+        blank:         "blank can not be empty"
+    models:            "order"
+    attributes:
+      order:
+        address:       "Address"
+        name:          "Name"
+        email:         "E-mail"
+        pay_type:      "Pay type"
+      line_item:
+        product:       "Product"
+        cart:          "Cart"
+  errors:
+    template:
+      body:            "There are problems with the following fields:"
+      header:
+        one:           "1 prohibited this order from being saved:"
+        other:         "%{count} prohibited this order from being saved:"
+  thanks:              "Thank you for your order"
