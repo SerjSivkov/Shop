@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %><br>
+    <%= form.label :name, 'ФИО:' %><br>
     <%= form.text_field :name, size: 40 %>
   </div>
 
   <div class="field">
-    <%= form.label :address %><br>
+    <%= form.label :address, 'Адрес:' %><br>
     <%= form.text_area :address, rows: 3, cols: 40 %>
   </div>
 
@@ -27,7 +27,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :pay_type %><br>
+    <%= form.label :pay_type, 'Оплата' %><br>
     <%= form.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Выберете метод оплаты' %>
   </div>
 

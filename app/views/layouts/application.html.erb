@@ -25,6 +25,15 @@
             <li><a href="http://www..../news">Новости</a></li>
             <li><a href="http://www..../contact">Контакты</a></li>
           </ul>
+          <% if session[:user_id] %>
+            <ul>
+              <li><%= link_to 'Заказы', orders_path %></li>
+              <li><%= link_to 'Товары', products_path %></li>
+              <li><%= link_to 'Пользователи', users_path %></li>
+            </ul>
+            <%= button_to 'Выйти', logout_path, method: :delete %>
+          <% end %>
+          <br>
           <h3 id="time"> <%= Time.now.strftime("%H:%M:%S") %></h3>
         </div>
         <div id="main">
