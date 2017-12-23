@@ -11,7 +11,7 @@ gem 'rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use jQuery as the JavaScript library
@@ -45,6 +45,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rvm-capistrano'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
