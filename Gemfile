@@ -41,6 +41,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'russian', '~> 0.6.0'
 gem 'rake'
+# Use credit card
+gem 'activemerchant'
+gem 'haml'
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
@@ -56,7 +60,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
-
+group :doc do
+	gem 'sdoc', require: false
+end
 group :development do
   gem 'rvm-capistrano'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
